@@ -4,11 +4,11 @@ import pygame
 from pygame.locals import * # Basic pygame imports
 
 # Global Variables for the game
-FPS = 40
+FPS = 45
 SCREENWIDTH = 337
 SCREENHEIGHT = 511
 SCREEN = pygame.display.set_mode((SCREENWIDTH, SCREENHEIGHT))
-GROUNDY = SCREENHEIGHT * 0.9
+GROUNDY = SCREENHEIGHT * 0.8
 GAME_SPRITES = {}
 GAME_SOUNDS = {}
 PLAYER = 'gallery/sprites/bird2.png'
@@ -20,7 +20,7 @@ def welcomeScreen():
     Shows welcome images on the screen
     """
 
-    playerx = int(SCREENWIDTH/2)
+    playerx = int(SCREENWIDTH/7)
     playery = int((SCREENHEIGHT - GAME_SPRITES['player'].get_height())/2)
     messagex = int((SCREENWIDTH - GAME_SPRITES['message'].get_width())/2)
     messagey = int(SCREENHEIGHT*0.13)
@@ -45,7 +45,7 @@ def welcomeScreen():
 
 def mainGame():
     score = 0
-    playerx = int(SCREENWIDTH/6)
+    playerx = int(SCREENWIDTH/7)
     playery = int(SCREENWIDTH/2)
     basex = 0
 
